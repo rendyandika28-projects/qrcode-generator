@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #7C3AED;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #6366F1;
+  --color-accent: #EC4899;
+  --color-background: #FAF5FF;
+  --color-foreground: #0F172A;
+  --color-muted: #F7F3FD;
+  --color-border: #EFE7FC;
+  --color-destructive: #DC2626;
+  --color-ring: #7C3AED;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #0F172A;
+  --color-muted-foreground: #64748B;
+  --color-input: #E2E8F0;
+}
+
+.dark {
+  --color-background: #0F0A1A;
+  --color-foreground: #F8FAFC;
+  --color-muted: #1E1433;
+  --color-border: #2D1B4E;
+  --color-card: #1A0F2E;
+  --color-card-foreground: #F8FAFC;
+  --color-muted-foreground: #A78BFA;
+  --color-input: #2D1B4E;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
